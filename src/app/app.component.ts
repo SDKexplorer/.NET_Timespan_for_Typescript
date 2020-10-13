@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Timespan } from '../models/Timespan';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'timespan-to-typescript';
+
+  public timeValue: Timespan;
+
+  constructor() {
+    this.timeValue = new Timespan('0.24:24:24');
+  }
+
 }
