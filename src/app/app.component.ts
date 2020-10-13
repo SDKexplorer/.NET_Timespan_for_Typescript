@@ -12,7 +12,23 @@ export class AppComponent {
   public timeValue: Timespan;
 
   constructor() {
-    this.timeValue = new Timespan('0.24:24:24');
+    this.timeValue = new Timespan('0.29:30:00');
+  }
+
+  onSecondsAdded(value: number) {
+    this.timeValue.addSeconds(value);
+  }
+
+  onMinutesAdded(value: number) {
+    this.timeValue.addMinutes(value);
+  }
+
+  onHoursAdded(value: number) {
+    this.timeValue.addHours(value);
+  }
+
+  onDaysAdded(value: number) {
+    this.timeValue.addDays(value);
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="col-12">
   <h1>
-    Timespan to string {{timeValue}}
+    Timespan to string {{timeValue.toString()}}
   </h1>
   <h2>
     Days value: {{timeValue.days}}
@@ -14,4 +14,23 @@
   <h2>
     Seconds value: {{timeValue.seconds}}
   </h2>
+</div>
+
+
+<div>
+  Add seconds
+  <input type="text" (keyup.enter)="onSecondsAdded(+$event.target.value)" value="-60"/>
+</div>
+
+<div>
+  Add minutes
+  <input type="text" (keyup.enter)="onMinutesAdded(+$event.target.value)" value="30"/>
+</div>
+<div>
+  Add hours
+  <input type="text" (keyup.enter)="onHoursAdded(+$event.target.value)" value="-12"/>
+</div>
+<div>
+  Add days
+  <input type="text" (keyup.enter)="onDaysAdded(+$event.target.value)" value="1"/>
 </div>
