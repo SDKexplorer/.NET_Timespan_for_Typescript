@@ -1,4 +1,4 @@
-# .NET Timespan To Typescript
+# .NET Timespan for Typescript
 
 A sample project that includes my version of <b> .NET Core's Timespan class definition for Typescript. </b>
 
