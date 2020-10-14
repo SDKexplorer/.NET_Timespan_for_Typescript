@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 
 import { TimepickerComponent } from '../control/timepicker/timepicker.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TimepickerComponent } from '../control/timepicker/timepicker.component'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

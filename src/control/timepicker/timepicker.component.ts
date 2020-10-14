@@ -13,7 +13,7 @@ export class TimepickerComponent {
   private readonly maxTimespanValue : Timespan = new Timespan("24:00:00");
   private readonly minTimespanValue : Timespan = new Timespan();
 
-  @Input() time: Timespan
+  @Input() time: Timespan;
   @Input() maxMinTimeFields: boolean = false;
   @Input() hiddenSeconds: boolean = false;
   @Input() hourStep: number = 1;
@@ -75,13 +75,13 @@ export class TimepickerComponent {
     var value = this.time.totalSeconds;
     if(value > max) {
       var newValue = value - max;
-      this.time = new Timespan();
+      this.time.addSeconds(-this.time.totalSeconds);
       this.time.addSeconds(newValue);
       return;
     }
     if(value < min) {
       var newValue = max + value;
-      this.time = new Timespan();
+      this.time.addSeconds(-this.time.totalSeconds);
       this.time.addSeconds(newValue);
       return;
     }
