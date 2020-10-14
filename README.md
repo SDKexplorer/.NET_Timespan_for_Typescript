@@ -1,4 +1,11 @@
-# TimespanToTypescript
+# .NET Timespan for Typescript
+
+A sample project that includes my version of <b> .NET Core's Timespan class definition for Typescript. </b>
+
+Works with <b> D.HH:MM:SS </b> or <b> HH:MM:SS </b> time formats.
+
+All of the "Add"(seconds/minutes/hours/days) methods are accepting negative values.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
