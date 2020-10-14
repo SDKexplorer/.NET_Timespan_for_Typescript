@@ -1,5 +1,5 @@
 # .NET Timespan for Typescript
-
+![](typescript_timepicker_timespan_dotnet.gif)
 A sample project that includes my version of <b> .NET Core's Timespan class definition for Typescript. </b>
 
 Works with <b> D.HH:MM:SS </b> or <b> HH:MM:SS </b> time formats.
