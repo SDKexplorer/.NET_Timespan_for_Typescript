@@ -1,36 +1,31 @@
-<div class="col-12">
-  <h1>
-    Timespan to string {{timeValue.toString()}}
-  </h1>
-  <h2>
-    Days value: {{timeValue.days}}
-  </h2>
-  <h2>
-    Hours value: {{timeValue.hours}}
-  </h2>
-  <h2>
-    Minutes value: {{timeValue.minutes}}
-  </h2>
-  <h2>
-    Seconds value: {{timeValue.seconds}}
-  </h2>
-</div>
-
-
-<div>
-  Add seconds
-  <input type="text" (keyup.enter)="onSecondsAdded(+$event.target.value)" value="-60"/>
-</div>
-
-<div>
-  Add minutes
-  <input type="text" (keyup.enter)="onMinutesAdded(+$event.target.value)" value="30"/>
-</div>
-<div>
-  Add hours
-  <input type="text" (keyup.enter)="onHoursAdded(+$event.target.value)" value="-12"/>
-</div>
-<div>
-  Add days
-  <input type="text" (keyup.enter)="onDaysAdded(+$event.target.value)" value="1"/>
+<div class="container">
+<form class="col-md-5 bg-light shadow justify-content-center  align-items-center">
+  <h2 class="border-bottom"> Timepicker for .NET Timespan</h2>
+  <div class="form-check-inline">
+    <div class="form-group">
+      <div class="border-bottom">
+        <timepicker [time]="this.timeValue" [hiddenSeconds]="true"></timepicker>
+      </div>
+        <timepicker [time]="this.timeValue"></timepicker>
+    </div>
+    <div class="form-group form-check border-left">
+      <div class="form-group">
+        <label for="hours">Hours</label>
+        <input id="hours" class="form-control item" [value]="this.timeValue.hours" >
+      </div>
+      <div class="form-group">
+        <label for="minutes">Minutes</label>
+        <input id="minutes" class="form-control item" [value]="this.timeValue.minutes" >
+      </div>
+      <div class="form-group">
+        <label for="seconds">Seconds</label>
+        <input id="seconds" class="form-control item" [value]="this.timeValue.seconds" >
+      </div>
+      <div class="form-group">
+        <label for="totalSeconds">Total seconds</label>
+        <input id="totalSeconds" class="form-control item" [value]="this.timeValue.totalSeconds" >
+      </div>
+    </div>
+  </div>
+</form>
 </div>

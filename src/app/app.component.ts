@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Timespan } from '../models/Timespan';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,11 +10,7 @@ import { Timespan } from '../models/Timespan';
 export class AppComponent {
   title = 'timespan-to-typescript';
 
-  public timeValue: Timespan;
-
-  constructor() {
-    this.timeValue = new Timespan('0.29:30:00');
-  }
+  public timeValue: Timespan = new Timespan('04:10:00');
 
   onSecondsAdded(value: number) {
     this.timeValue.addSeconds(value);

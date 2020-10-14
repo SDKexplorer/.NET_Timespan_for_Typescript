@@ -30,6 +30,10 @@ export class Timespan {
     return DateTimeConverter.numberToTimeDecimal(timeValue);
   }
 
+  get totalSeconds(): number {
+    return this._totalTimeInSeconds;
+  }
+
   constructor(timespanStringValue: any = null) {
     if(timespanStringValue) {
       this.initTimespanFromString(timespanStringValue.toString());
@@ -111,6 +115,21 @@ export class Timespan {
 
   addDays(days: number) {
     this._totalTimeInSeconds += DateTimeConverter.daysToSeconds(days);
+    this._totalSecondsToIntData();
+  }
+
+  add(timespan: Timespan) {
+    this._totalTimeInSeconds += timespan.totalSeconds;
+    this._totalSecondsToIntData();
+  }
+
+  negate() {
+    this._totalTimeInSeconds *= -1;
+    this._totalSecondsToIntData();
+  }
+
+  subtract(timespan: Timespan) {
+    this._totalTimeInSeconds -= timespan.totalSeconds;
     this._totalSecondsToIntData();
   }
 
