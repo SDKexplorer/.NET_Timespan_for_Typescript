@@ -34,3 +34,7 @@
   Add days
   <input type="text" (keyup.enter)="onDaysAdded(+$event.target.value)" value="1"/>
 </div>
+
+<timepicker [time]="this.timeValue"></timepicker>
+<timepicker [time]="this.timeValue" [hiddenSeconds]="true"></timepicker>
+<timepicker [time]="this.timeValue"></timepicker>

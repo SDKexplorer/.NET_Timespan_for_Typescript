@@ -1,0 +1,37 @@
+<div class="form-row">
+
+  <div class="form-check-inline text-center">
+
+    <div class="form-group">
+      <button class="btn font-weight-bold" (click)="onHourStepIncrement()">+</button>
+      <input class="form-control font-weight-bold text-center" id="hours" type="number"
+             value="{{time.hours}}" (change)="onHoursChanged($event.target.value)"
+             [min]="this.maxMinTimeFields ? 0 : -99" [max]="this.maxMinTimeFields ? 23 : 99">
+      <button class="btn font-weight-bold" (click)="onHourStepDecrement()">-</button>
+    </div>
+
+    <div class="form-group">
+      <label class="col-form-label font-weight-bold p-1">:</label>
+    </div>
+
+    <div class="form-group">
+      <button class="btn font-weight-bold" (click)="onMinuteStepIncrement()">+</button>
+      <input class="form-control font-weight-bold text-center" id="minutes" type="number"
+           value="{{time.minutes}}" (change)="onMinutesChanged($event.target.value)"
+           [min]="this.maxMinTimeFields ? 0 : -99" [max]="this.maxMinTimeFields ? 59 : 99">
+      <button class="btn font-weight-bold" (click)="onMinuteStepDecrement()">-</button>
+    </div>
+
+    <div [hidden]="hiddenSeconds" class="form-group">
+      <label class="col-form-label p-1">:</label>
+    </div>
+
+    <div [hidden]="hiddenSeconds" class="form-group">
+      <button class="btn font-weight-bold font-weight-bold" (click)="onSecondStepIncrement()">+</button>
+      <input class="form-control font-weight-bold text-center" id="seconds" type="number"
+           value="{{time.seconds}}" (change)="onSecondsChanged($event.target.value)"
+           [min]="this.maxMinTimeFields ? 0 : -99" [max]="this.maxMinTimeFields ? 59 : 99">
+      <button class="btn font-weight-bold" (click)="onSecondStepDecrement()">-</button>
+    </div>
+  </div>
+</div>
