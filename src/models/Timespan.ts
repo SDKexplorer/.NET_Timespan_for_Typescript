@@ -51,6 +51,10 @@ export class Timespan {
     return `${ifNegativeValue}${ifHasDaysValue}${this.hours}${smhChar}${this.minutes}${smhChar}${this.seconds}`;
   }
 
+  public toJSON(): string {
+    return this.toString();
+  }
+
   private initTimespanFromString(timespanStringValue: string) { // Expected value D.HH:MM:SS or HH:MM:SS
 
     var timeValues = timespanStringValue.split(this.hourMinutesAndSecondSplitChar);
